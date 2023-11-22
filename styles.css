@@ -1,0 +1,41 @@
+/* Estilos básicos, puedes personalizarlos según tus preferencias */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  input, select, button {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
