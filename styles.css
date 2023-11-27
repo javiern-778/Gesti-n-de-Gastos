@@ -5,37 +5,61 @@ body {
     padding: 0;
   }
   
-  header {
-    background-color: #a0fb0e;
-    color: #a0fb0e;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  main {
-    max-width: 800px;
-    margin: 20px auto;
-  }
-  
-  form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  input, select, button {
-    padding: 8px;
-    font-size: 16px;
-  }
-  
-  button {
-    background-color: #a0fb0e;
-    color: #a0fb0e;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #a0fb0e;
-  }
+ /* styles.css */
+
+/* Estilos para el encabezado */
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Estilos para el formulario de gastos */
+#expense-form {
+  margin-bottom: 20px;
+}
+
+#expense-form input,
+#expense-form select,
+#expense-form button {
+  margin: 5px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+#expense-form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#expense-form button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para la lista de gastos */
+.expense-item {
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.expense-item p {
+  margin: 0;
+}
+
+.expense-item button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.expense-item button:hover {
+  background-color: #ddd;
+}
+
   
