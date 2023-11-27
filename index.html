@@ -17,7 +17,6 @@
         <option value="comida">Comida</option>
         <option value="transporte">Transporte</option>
         <option value="entretenimiento">Entretenimiento</option>
-        <option value="otros">otros</option>    
         <!-- Agrega más opciones de categorías según sea necesario -->
       </select>
       <button type="submit">Agregar Gasto</button>
@@ -29,7 +28,6 @@
         <option value="comida">Comida</option>
         <option value="transporte">Transporte</option>
         <option value="entretenimiento">Entretenimiento</option>
-        <option value="otros">otros</option>
         <!-- Agrega más opciones de categorías aquí -->
       </select>
     </div>
@@ -62,7 +60,11 @@
         if (description && !isNaN(amount)) {
           const expenseItem = document.createElement('div');
           expenseItem.classList.add('expense-item');
-          expenseItem.innerHTML = `<p>${description} - $${amount.toFixed(2)} - ${category} <button class="delete-btn">Eliminar</button></p>`;
+
+          const currentDate = new Date();
+          const formattedDate = `${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()}`;
+
+          expenseItem.innerHTML = `<p>${description} - $${amount.toFixed(2)} - ${category} - ${formattedDate} <button class="delete-btn">Eliminar</button></p>`;
           expenseList.appendChild(expenseItem);
 
           total += amount;
@@ -108,3 +110,4 @@
   </script>
 </body>
 </html>
+
