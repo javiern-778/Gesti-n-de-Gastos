@@ -24,6 +24,18 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('expense-description').value = '';
         document.getElementById('expense-amount').value = '';
       }
+        expenseForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const description = document.getElementById('expense-description').value;
+  const amount = parseFloat(document.getElementById('expense-amount').value);
+  const category = document.getElementById('expense-category').value;
+
+  if (description && !isNaN(amount)) {
+    // Resto del código para agregar el gasto y mostrarlo en la lista
+  }
+});
+
     });
   });
   
