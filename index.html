@@ -50,6 +50,14 @@
       let total = 0;
       let expenseCount = 0;
 
+      // Función para crear un elemento de gasto
+      function createExpenseItem(description, amount, category, date) {
+        const expenseItem = document.createElement('div');
+        expenseItem.classList.add('expense-item');
+        expenseItem.innerHTML = `<p>${description} - $${amount.toFixed(2)} - ${category} - ${date} <button class="edit-btn">Editar</button> <button class="delete-btn">Eliminar</button></p>`;
+        return expenseItem;
+      }
+
       expenseForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
@@ -58,13 +66,10 @@
         const category = document.getElementById('expense-category').value;
 
         if (description && !isNaN(amount)) {
-          const expenseItem = document.createElement('div');
-          expenseItem.classList.add('expense-item');
-
           const currentDate = new Date();
           const formattedDate = `${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()}`;
-
-          expenseItem.innerHTML = `<p>${description} - $${amount.toFixed(2)} - ${category} - ${formattedDate} <button class="delete-btn">Eliminar</button></p>`;
+          
+          const expenseItem = createExpenseItem(description, amount, category, formattedDate);
           expenseList.appendChild(expenseItem);
 
           total += amount;
@@ -91,6 +96,18 @@
           expenseCount--;
           const expenseCountElement = document.getElementById('expense-count');
           expenseCountElement.textContent = `Número de Gastos: ${expenseCount}`;
+        } else if (event.target.classList.contains('edit-btn')) {
+          const expenseItem = event.target.parentElement;
+          const expenseDetails = expenseItem.textContent.split(' - '); 
+
+          const description = expenseDetails[0];
+          const amount = parseFloat(expenseDetails[1].replace('$', ''));
+          const category = expenseDetails[2];
+          const date = expenseDetails[3];
+
+          // Aquí puedes implementar la lógica para editar el gasto
+          // Podrías abrir un modal o un formulario prellenado con los detalles para editar
+          // ...
         }
       });
 
@@ -110,4 +127,5 @@
   </script>
 </body>
 </html>
+
 
