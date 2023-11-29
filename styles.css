@@ -1,65 +1,65 @@
 /* Estilos básicos, puedes personalizarlos según tus preferencias */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
- /* styles.css */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* styles.css */
 
 /* Estilos para el encabezado */
 header {
-  background-color: #ff8862;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
+background-color: #1ed82e;
+color: #101110;
+text-align: center;
+padding: 20px 0;
 }
 
 /* Estilos para el formulario de gastos */
 #expense-form {
-  margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 #expense-form input,
 #expense-form select,
 #expense-form button {
-  margin: 5px;
-  padding: 8px;
-  font-size: 16px;
+margin: 5px;
+padding: 8px;
+font-size: 16px;
 }
 
 #expense-form button {
-  background-color: #ff8862;
-  color: white;
-  border: none;
-  cursor: pointer;
+background-color: #68da3e;
+color: rgb(4, 82, 30);
+border: none;
+cursor: pointer;
 }
 
 #expense-form button:hover {
-  background-color: #45a049;
+background-color: #1ac522;
 }
 
 /* Estilos para la lista de gastos */
 .expense-item {
-  margin-bottom: 5px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
+margin-bottom: 5px;
+padding: 10px;
+border: 1px solid #3ae025;
+background-color: #8b8a8a;
 }
 
 .expense-item p {
-  margin: 0;
+margin: 0;
 }
 
 .expense-item button {
-  margin-left: 10px;
-  padding: 5px 10px;
-  border: none;
-  cursor: pointer;
+margin-left: 10px;
+padding: 5px 10px;
+border: none;
+cursor: pointer;
 }
 
 .expense-item button:hover {
-  background-color: #ddd;
+background-color: #ca1313;
 }
 
   
