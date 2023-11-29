@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Gestión de Gastos</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Aquí se vincula el archivo CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
@@ -24,34 +24,16 @@
         <option value="entretenimiento">Entretenimiento</option>
         <option value="vivienda">Vivienda</option>
         <option value="alimentacion">Alimentación</option>
-        <!-- Agrega más opciones de categorías según sea necesario -->
+        <!-- Agrega más opciones según necesites -->
       </select>
       <button type="submit">Agregar Gasto</button>
     </form>
-    <div>
-      <label for="filter-category">Filtrar por Categoría:</label>
-      <select id="filter-category">
-        <option value="all">Todas</option>
-        <option value="Salud y Cuidado Personal">Salud y Cuidado Personal</option>
-        <option value="Educación">Educación</option>
-        <option value="Deudas y Finanzas">Deudas y Finanzas</option>
-        <option value="Ropa y Accesorios">Ropa y Accesorios</option>
-        <option value="Misceláneos">Misceláneos</option>
-        <option value="transporte">Transporte</option>
-        <option value="entretenimiento">Entretenimiento</option>
-        <option value="vivienda">Vivienda</option>
-        <option value="alimentacion">Alimentación</option>
-        <!-- Agrega más opciones de categorías aquí -->
-      </select>
-    </div>
+    
     <div id="expense-list">
       <!-- Aquí se mostrarán los gastos agregados -->
     </div>
     <div id="total-expenses">
       Total: $0.00
-    </div>
-    <div id="expense-count">
-      Número de Gastos: 0
     </div>
   </main>
   <script>
@@ -59,17 +41,9 @@
       const expenseForm = document.getElementById('expense-form');
       const expenseList = document.getElementById('expense-list');
       const totalExpenses = document.getElementById('total-expenses');
-      const filterSelect = document.getElementById('filter-category');
       let total = 0;
-      let expenseCount = 0;
-
-      function createExpenseItem(description, amount, category, date) {
-        const expenseItem = document.createElement('div');
-        expenseItem.classList.add('expense-item');
-        
-        expenseItem.innerHTML = `<p>${description} - $${amount.toFixed(2)} - ${category} - ${date} <button class="edit-btn">Editar</button> <button class="delete-btn">Eliminar</button></p>`;
-        return expenseItem;
-      }
+      let editing = false;
+      let editedExpense;
 
       expenseForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -77,27 +51,61 @@
         const description = document.getElementById('expense-description').value;
         const amount = parseFloat(document.getElementById('expense-amount').value);
         const category = document.getElementById('expense-category').value;
+        const date = new Date();
 
         if (description && !isNaN(amount)) {
-          const currentDate = new Date();
-          const formattedDate = `${currentDate.toLocaleDateString()} ${currentDate.toLocaleTimeString()}`;
-
-          const expenseItem = createExpenseItem(description, amount, category, formattedDate);
-          expenseList.appendChild(expenseItem);
-
-          total += amount;
-          totalExpenses.textContent = `Total: $${total.toFixed(2)}`;
-
-          expenseCount++;
-          const expenseCountElement = document.getElementById('expense-count');
-          expenseCountElement.textContent = `Número de Gastos: ${expenseCount}`;
+          if (editing) {
+            // Si está en modo edición, actualiza el gasto existente
+            editedExpense.firstChild.textContent = `${description} - $${amount.toFixed(2)} - ${category} - ${date.toLocaleString()}`;
+            totalExpenses.textContent = `Total: $${total.toFixed(2)}`;
+            editing = false;
+          } else {
+            const expenseItem = createExpenseItem(description, amount, category, date);
+            expenseList.appendChild(expenseItem);
+            total += amount;
+            totalExpenses.textContent = `Total: $${total.toFixed(2)}`;
+          }
 
           document.getElementById('expense-description').value = '';
           document.getElementById('expense-amount').value = '';
         }
       });
 
-      // Resto del código permanece igual...
+      function createExpenseItem(description, amount, category, date) {
+        const expenseItem = document.createElement('div');
+        expenseItem.classList.add('expense-item');
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Eliminar';
+        deleteButton.classList.add('delete-btn');
+
+        const editButton = document.createElement('button');
+        editButton.textContent = 'Editar';
+        editButton.classList.add('edit-btn');
+
+        expenseItem.innerHTML = `<p>${description} - $${amount.toFixed(2)} - ${category} - ${date.toLocaleString()}</p>`;
+        expenseItem.appendChild(deleteButton);
+        expenseItem.appendChild(editButton);
+
+        deleteButton.addEventListener('click', function() {
+          expenseItem.remove();
+          total -= amount;
+          totalExpenses.textContent = `Total: $${total.toFixed(2)}`;
+        });
+
+        editButton.addEventListener('click', function() {
+          // Lógica para editar el gasto
+          // Prellenar el formulario con los detalles actuales del gasto para editarlos
+          editing = true;
+          editedExpense = expenseItem;
+          const expenseDetails = expenseItem.firstChild.textContent.split(' - ');
+          document.getElementById('expense-description').value = expenseDetails[0];
+          document.getElementById('expense-amount').value = parseFloat(expenseDetails[1].replace('$', ''));
+          document.getElementById('expense-category').value = expenseDetails[2];
+        });
+
+        return expenseItem;
+      }
     });
   </script>
 </body>
