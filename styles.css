@@ -9,8 +9,8 @@ body {
 
 /* Estilos para el encabezado */
 header {
-background-color: #00c6ab;
-color: #416864;
+background-color: #1ed82e;
+color: #101110;
 text-align: center;
 padding: 20px 0;
 }
@@ -30,21 +30,21 @@ font-size: 16px;
 
 #expense-form button {
 background-color: #68da3e;
-color: rgb(34, 37, 35);
+color: rgb(4, 82, 30);
 border: none;
 cursor: pointer;
 }
 
 #expense-form button:hover {
-background-color: #45a049;
+background-color: #1ac522;
 }
 
 /* Estilos para la lista de gastos */
 .expense-item {
 margin-bottom: 5px;
 padding: 10px;
-border: 1px solid #e27e0c;
-background-color: #f9f9f9;
+border: 1px solid #3ae025;
+background-color: #8b8a8a;
 }
 
 .expense-item p {
@@ -59,5 +59,5 @@ cursor: pointer;
 }
 
 .expense-item button:hover {
-background-color: #ddd;
+background-color: #ca1313;
 }
