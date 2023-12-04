@@ -9,7 +9,7 @@ body {
 
 /* Estilos para el encabezado */
 header {
-background-color: #1ed82e;
+background-color: #c5d81b;
 color: #101110;
 text-align: center;
 padding: 20px 0;
@@ -29,14 +29,14 @@ font-size: 16px;
 }
 
 #expense-form button {
-background-color: #68da3e;
-color: rgb(4, 82, 30);
+background-color: #9cb931;
+color: rgb(0, 0, 0);
 border: none;
 cursor: pointer;
 }
 
 #expense-form button:hover {
-background-color: #1ac522;
+background-color: #04fa10;
 }
 
 /* Estilos para la lista de gastos */
@@ -44,7 +44,7 @@ background-color: #1ac522;
 margin-bottom: 5px;
 padding: 10px;
 border: 1px solid #3ae025;
-background-color: #8b8a8a;
+background-color: #8b8a8a2f;
 }
 
 .expense-item p {
@@ -59,8 +59,10 @@ cursor: pointer;
 }
 
 .expense-item button:hover {
-background-color: #ca1313;
+background-color: #2320ec4d;
 }
-
-
-  
+body {
+  background-image: url('fondo2.webp');
+  background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
+  /* Otros estilos para el fondo, como color de fondo de respaldo si la imagen no se carga */
+}
