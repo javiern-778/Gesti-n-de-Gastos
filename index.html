@@ -14,16 +14,16 @@
       <input type="text" id="expense-description" placeholder="Descripción" required>
       <input type="number" id="expense-amount" placeholder="Monto" required>
       <select id="expense-category">
-        <option value="all">Todas</option>
+        <option value="Todas">Todas</option>
         <option value="Salud y Cuidado Personal">Salud y Cuidado Personal</option>
         <option value="Educación">Educación</option>
         <option value="Deudas y Finanzas">Deudas y Finanzas</option>
         <option value="Ropa y Accesorios">Ropa y Accesorios</option>
         <option value="Misceláneos">Misceláneos</option>
-        <option value="transporte">Transporte</option>
-        <option value="entretenimiento">Entretenimiento</option>
-        <option value="vivienda">Vivienda</option>
-        <option value="alimentacion">Alimentación</option>
+        <option value="Transporte">Transporte</option>
+        <option value="Entretenimiento">Entretenimiento</option>
+        <option value="Vivienda">Vivienda</option>
+        <option value="Alimentación">Alimentación</option>
         <!-- Agrega más opciones según necesites -->
       </select>
       <button type="submit">Agregar Gasto</button>
@@ -106,7 +106,46 @@
 
         return expenseItem;
       }
+
+      // Función para mostrar gastos por categoría
+      function displayExpensesByCategory(category) {
+        const expenseItems = document.getElementsByClassName('expense-item');
+        for (const item of expenseItems) {
+          const expenseCategory = item.firstChild.textContent.split(' - ')[2];
+          if (category === 'Todas' || expenseCategory === category) {
+            item.style.display = 'block'; // Mostrar gastos de la categoría seleccionada
+          } else {
+            item.style.display = 'none'; // Ocultar gastos que no corresponden a la categoría seleccionada
+          }
+        }
+      }
+
+      // Evento cuando se cambia la selección de categoría
+      document.getElementById('expense-category').addEventListener('change', function() {
+        const selectedCategory = this.value;
+        displayExpensesByCategory(selectedCategory);
+      });
     });
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js"></script>
+  <script>
+    // Configuración de Firebase, reemplaza con tu propia configuración
+    const firebaseConfig = {
+      apiKey: "TU_API_KEY",
+      authDomain: "TU_AUTH_DOMAIN",
+      databaseURL: "TU_DATABASE_URL",
+      projectId: "TU_PROJECT_ID",
+      storageBucket: "TU_STORAGE_BUCKET",
+      messagingSenderId: "TU_MESSAGING_SENDER_ID",
+      appId: "TU_APP_ID"
+    };
+  
+    // Inicializar Firebase
+    firebase.initializeApp(firebaseConfig);
+  
+    // Referencia a la base de datos
+    const database = firebase.database();
   </script>
 </body>
 </html>
