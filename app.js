@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const description = document.getElementById('expense-description').value;
     const amount = parseFloat(document.getElementById('expense-amount').value);
     const category = document.getElementById('expense-category').value;
-
+    const date = new Date();
+    
     if (description && !isNaN(amount)) {
       const expenseItem = document.createElement('div');
       expenseItem.classList.add('expense-item');
@@ -23,18 +24,26 @@ document.addEventListener('DOMContentLoaded', function() {
       // Limpiar campos después de agregar gasto
       document.getElementById('expense-description').value = '';
       document.getElementById('expense-amount').value = '';
+
+      // Guardar el gasto en Firebase
+      const newExpenseRef = database.ref('gastos').push();
+      newExpenseRef.set({
+        description,
+        amount,
+        category,
+        date: date.toLocaleString()
+      });
     }
-      expenseForm.addEventListener('submit', function(event) {
-event.preventDefault();
-
-const description = document.getElementById('expense-description').value;
-const amount = parseFloat(document.getElementById('expense-amount').value);
-const category = document.getElementById('expense-category').value;
-
-if (description && !isNaN(amount)) {
-  // Resto del código para agregar el gasto y mostrarlo en la lista
-}
-});
-
+    expenseForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const description = document.getElementById('expense-description').value;
+      const amount = parseFloat(document.getElementById('expense-amount').value);
+      const category = document.getElementById('expense-category').value;
+      
+      if (description && !isNaN(amount)) {
+        // Resto del código para agregar el gasto y mostrarlo en la lista
+      }
+      });
   });
 });
