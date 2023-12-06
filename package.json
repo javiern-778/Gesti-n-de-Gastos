@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "firebase": "^10.7.0",
+    "react_native": "^0.0.1",
     "react-native-maps": "^1.8.0"
   }
 }

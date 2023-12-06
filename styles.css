@@ -9,7 +9,7 @@ body {
 
 /* Estilos para el encabezado */
 header {
-background-color: #1ed82e;
+background-color: #c5d81b;
 color: #101110;
 text-align: center;
 padding: 20px 0;
@@ -29,7 +29,7 @@ font-size: 16px;
 }
 
 #expense-form button {
-background-color: #bae423;
+background-color: #9cb931;
 color: rgb(0, 0, 0);
 border: none;
 cursor: pointer;
@@ -60,4 +60,9 @@ cursor: pointer;
 
 .expense-item button:hover {
 background-color: #2320ec4d;
+}
+body {
+  background-image: url('fondo2.webp');
+  background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
+  /* Otros estilos para el fondo, como color de fondo de respaldo si la imagen no se carga */
 }
