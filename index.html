@@ -4,13 +4,18 @@
   <meta charset="UTF-8">
   <title>Gestión de Gastos</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Tus estilos y otros elementos de encabezado -->
 </head>
 <body>
   <header>
     <h1>Gestión de Gastos</h1>
+    <!-- Otros elementos de encabezado si los tienes -->
   </header>
+  
   <main>
+    <!-- Tu formulario existente para agregar gastos -->
     <form id="expense-form">
+      <!-- Elementos del formulario para agregar gastos -->
       <input type="text" id="expense-description" placeholder="Descripción" required>
       <input type="number" id="expense-amount" placeholder="Monto" required>
       <select id="expense-category">
@@ -27,15 +32,28 @@
         <!-- Agrega más opciones según necesites -->
       </select>
       <button type="submit">Agregar Gasto</button>
+      <!-- ... -->
     </form>
-    
+
+    <!-- Contenedor para mostrar los gastos -->
     <div id="expense-list">
       <!-- Aquí se mostrarán los gastos agregados -->
     </div>
     <div id="total-expenses">
       Total: $0.00
+    
+    <!-- Elementos para filtrar por fecha -->
+    <div>
+      <input type="date" id="date-input">
+      <button id="search-by-date">Buscar por Fecha</button>
+    </div>
+
+    <!-- Contenedor para mostrar los movimientos por fecha -->
+    <div id="movements-by-date">
+      <!-- Aquí se mostrarán los movimientos por fecha -->
     </div>
   </main>
+  <!-- Tus scripts, incluyendo Firebase y el código para buscar movimientos por fecha -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const expenseForm = document.getElementById('expense-form');
@@ -127,9 +145,10 @@
       });
     });
   </script>
-  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js"></script>
-  <script>
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js';
+    import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore.js';
+  
     // Configuración de Firebase, reemplaza con tu propia configuración
     const firebaseConfig = {
       apiKey: "TU_API_KEY",
@@ -141,11 +160,10 @@
       appId: "TU_APP_ID"
     };
   
-    // Inicializar Firebase
-    firebase.initializeApp(firebaseConfig);
-  
-    // Referencia a la base de datos
-    const database = firebase.database();
+    const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
   </script>
+ 
 </body>
 </html>
+
