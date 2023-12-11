@@ -1,17 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Inicialización de Firebase
-  var firebaseConfig = {
-    // Tu configuración de Firebase aquí
+  const firebaseConfig = {
+    // Configuración de Firebase aquí
     apiKey: "tu-api-key",
     authDomain: "tu-proyecto-id.firebaseapp.com",
     projectId: "tu-proyecto-id",
-    // databaseURL: "http://localhost:8080" // Esto no es necesario para Firestore
+    // databaseURL: "http://localhost:9090" // Esto no es necesario para Firestore
     // Agrega otras configuraciones si es necesario
   };
+  
   firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
 
-  // Referencia a la base de datos
-  var database = firebase.database();
+  // Verificación si se está ejecutando localmente para usar el emulador Firestore
+  if (location.hostname === 'localhost') {
+    db.useEmulator('localhost', 8080);
+  }
 
   const expenseForm = document.getElementById('expense-form');
   const expenseList = document.getElementById('expense-list');
@@ -41,13 +44,18 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('expense-description').value = '';
       document.getElementById('expense-amount').value = '';
 
-      // Guardar el gasto en Firebase
-      const newExpenseRef = database.ref('gastos').push();
-      newExpenseRef.set({
+      // Guardar el gasto en Firestore
+      db.collection('gastos').add({
         description,
         amount,
         category,
         date: date.toLocaleString()
+      })
+      .then((docRef) => {
+        console.log("Gasto agregado con ID: ", docRef.id);
+      })
+      .catch((error) => {
+        console.error("Error al agregar el gasto: ", error);
       });
     }
   });

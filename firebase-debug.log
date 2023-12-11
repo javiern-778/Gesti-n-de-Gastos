@@ -1,38 +1,51 @@
-[debug] [2023-12-07T09:01:23.088Z] ----------------------------------------------------------------------
-[debug] [2023-12-07T09:01:23.091Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\javie\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only firestore
-[debug] [2023-12-07T09:01:23.092Z] CLI Version:   13.0.0
-[debug] [2023-12-07T09:01:23.093Z] Platform:      win32
-[debug] [2023-12-07T09:01:23.093Z] Node Version:  v18.18.0
-[debug] [2023-12-07T09:01:23.099Z] Time:          Thu Dec 07 2023 03:01:23 GMT-0600 (hora estándar central)
-[debug] [2023-12-07T09:01:23.099Z] ----------------------------------------------------------------------
+[debug] [2023-12-08T14:28:36.530Z] ----------------------------------------------------------------------
+[debug] [2023-12-08T14:28:36.534Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\javie\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2023-12-08T14:28:36.534Z] CLI Version:   13.0.1
+[debug] [2023-12-08T14:28:36.535Z] Platform:      win32
+[debug] [2023-12-08T14:28:36.535Z] Node Version:  v18.18.0
+[debug] [2023-12-08T14:28:36.541Z] Time:          Fri Dec 08 2023 08:28:36 GMT-0600 (hora estándar central)
+[debug] [2023-12-08T14:28:36.541Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2023-12-07T09:01:23.270Z] Field ".emulators.firestore.port" in "firebase.json" is possibly invalid: should be number
-[debug] [2023-12-07T09:01:23.279Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-12-07T09:01:23.279Z] > authorizing via signed-in user (javiernoecruzespana@gmail.com)
-[debug] [2023-12-07T09:01:24.023Z] java version "20.0.2" 2023-07-18
+[debug] [2023-12-08T14:28:36.685Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-08T14:28:36.686Z] > authorizing via signed-in user (javiernoecruzespana@gmail.com)
+[debug] [2023-12-08T14:28:37.120Z] java version "20.0.2" 2023-07-18
 
-[debug] [2023-12-07T09:01:24.026Z] Java(TM) SE Runtime Environment (build 20.0.2+9-78)
+[debug] [2023-12-08T14:28:37.122Z] Java(TM) SE Runtime Environment (build 20.0.2+9-78)
 Java HotSpot(TM) 64-Bit Server VM (build 20.0.2+9-78, mixed mode, sharing)
 
-[debug] [2023-12-07T09:01:24.066Z] Parsed Java major version: 20
-[info] i  emulators: Starting emulators: firestore {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: firestore"}}
-[debug] [2023-12-07T09:01:24.091Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-12-07T09:01:24.092Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-12-07T09:01:24.092Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-12-07T09:01:24.092Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[debug] [2023-12-07T09:01:24.160Z] [hub] writing locator at C:\Users\javie\AppData\Local\Temp\hub-gesti-n-de-gastos2.json
-[debug] [2023-12-07T09:01:24.191Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-12-07T09:01:24.192Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
-[debug] [2023-12-07T09:01:24.192Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\javie\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.18.2.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","gesti-n-de-gastos2","--rules","C:\\Users\\javie\\Desktop\\Aplicación de Gestión de Gastos\\firestore.rules","--single_project_mode",true],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\javie\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.18.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"gesti-n-de-gastos2\",\"--rules\",\"C:\\\\Users\\\\javie\\\\Desktop\\\\Aplicación de Gestión de Gastos\\\\firestore.rules\",\"--single_project_mode\",true],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[debug] [2023-12-08T14:28:37.152Z] Parsed Java major version: 20
+[info] i  emulators: Starting emulators: firestore, database {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: firestore, database"}}
+[debug] [2023-12-08T14:28:37.174Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-08T14:28:37.175Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-08T14:28:37.175Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-08T14:28:37.175Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-08T14:28:37.176Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9090}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-12-08T14:28:37.231Z] [hub] writing locator at C:\Users\javie\AppData\Local\Temp\hub-gesti-n-de-gastos2.json
+[warn] !  firestore: Cloud Firestore Emulator does not support multiple databases yet. {"metadata":{"emulator":{"name":"firestore"},"message":"Cloud Firestore Emulator does not support multiple databases yet."}}
+[warn] !  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file. {"metadata":{"emulator":{"name":"firestore"},"message":"Did not find a Cloud Firestore rules file specified in a firebase.json config file."}}
+[warn] !  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"firestore"},"message":"The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[debug] [2023-12-08T14:28:37.262Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-12-08T14:28:37.263Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2023-12-08T14:28:37.263Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\javie\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.18.2.jar","--host","127.0.0.1","--port",9099,"--websocket_port",9150,"--project_id","gesti-n-de-gastos2","--single_project_mode",true],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\javie\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.18.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9099,\"--websocket_port\",9150,\"--project_id\",\"gesti-n-de-gastos2\",\"--single_project_mode\",true],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
 [info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
 [info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
-[debug] [2023-12-07T09:01:27.928Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-12-07T09:01:27.930Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2023-12-07T09:01:27.930Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\javie\\.cache\\firebase\\emulators\\ui-v1.11.7\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\javie\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.7\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[debug] [2023-12-08T14:28:40.766Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gesti-n-de-gastos2 [none]
+[debug] [2023-12-08T14:28:41.661Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gesti-n-de-gastos2 200
+[debug] [2023-12-08T14:28:41.662Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gesti-n-de-gastos2 {"projectId":"gesti-n-de-gastos2","projectNumber":"671139222197","displayName":"Gesti-n-de-Gastos2","name":"projects/gesti-n-de-gastos2","resources":{"hostingSite":"gesti-n-de-gastos2","realtimeDatabaseInstance":"gesti-n-de-gastos2-default-rtdb"},"state":"ACTIVE","etag":"1_b1914a4f-0dd9-4998-a6ad-9a79dd431fe8"}
+[debug] [2023-12-08T14:28:41.664Z] database rules config:  []
+[warn] !  database: Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"database"},"message":"Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[debug] [2023-12-08T14:28:41.676Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2023-12-08T14:28:41.676Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-12-08T14:28:41.676Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2023-12-08T14:28:41.677Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","C:\\Users\\javie\\.cache\\firebase\\emulators\\firebase-database-emulator-v4.11.2.jar","--host","127.0.0.1","--port",9090,"--single_project_mode","Warning"],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\javie\\\\.cache\\\\firebase\\\\emulators\\\\firebase-database-emulator-v4.11.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9090,\"--single_project_mode\",\"Warning\"],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2023-12-08T14:28:45.963Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-12-08T14:28:45.964Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-12-08T14:28:45.964Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\javie\\.cache\\firebase\\emulators\\ui-v1.11.7\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\javie\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.7\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
 [info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2023-12-07T09:01:28.313Z] Web / API server started at 127.0.0.1:4000
+[debug] [2023-12-08T14:28:46.291Z] Web / API server started at 127.0.0.1:4000
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
-[debug] [2023-12-07T09:01:28.313Z] Web / API server started at ::1:4000
+[debug] [2023-12-08T14:28:46.292Z] Web / API server started at ::1:4000
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
 [info] 
 ┌─────────────────────────────────────────────────────────────┐
@@ -43,7 +56,9 @@ Java HotSpot(TM) 64-Bit Server VM (build 20.0.2+9-78, mixed mode, sharing)
 ┌───────────┬────────────────┬─────────────────────────────────┐
 │ Emulator  │ Host:Port      │ View in Emulator UI             │
 ├───────────┼────────────────┼─────────────────────────────────┤
-│ Firestore │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore │
+│ Firestore │ 127.0.0.1:9099 │ http://127.0.0.1:4000/firestore │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Database  │ 127.0.0.1:9090 │ http://127.0.0.1:4000/database  │
 └───────────┴────────────────┴─────────────────────────────────┘
   Emulator Hub running at 127.0.0.1:4400
   Other reserved ports: 4500, 9150
